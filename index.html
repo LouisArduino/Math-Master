@@ -978,7 +978,7 @@
     </div>
 
     <script>
-        let ajoutAcceuil2 = localStorage.getItem('ajoutAcceuil2');
+        let ajoutAcceuil3 = localStorage.getItem('ajoutAcceuil3');
         let maj2connue = localStorage.getItem('maj2connue');
         if (maj2connue !== 'true') {
             alert(`Nouvelle mise à jour !\nNouveau mode inversé ! \nNouveau mode sombre automatique !`);
@@ -1696,9 +1696,9 @@ try {
             }
             if (stats.totalGames >= 2) {
                 if (isMobile) {
-                    if (ajoutAcceuil2 !== 'true') {
-                        ajoutAcceuil2 = 'true';
-                        localStorage.setItem('ajoutAcceuil2', 'true');
+                    if (ajoutAcceuil3 !== 'true') {
+                        ajoutAcceuil3 = 'true';
+                        localStorage.setItem('ajoutAcceuil3', 'true');
                         document.activeElement.blur();
                         alert("Tu peux ajouter ce site comme une app sur ton écran d'acceuil !\nSur Safari : appuie sur le bouton Partager puis « Sur l’écran d’accueil ».\nSur Chrome : appuie sur le menu « ⋮ » puis sur « Ajouter à l’écran d’accueil ».\nSur Firefox : appuie sur le menu « ≡ », puis « Partager » et « Sur l’écran d’accueil ».\n")
                     }               
