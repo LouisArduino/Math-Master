@@ -1699,7 +1699,7 @@ try {
                     if (ajoutAcceuil2 !== 'true') {
                         ajoutAcceuil2 = 'true';
                         localStorage.setItem('ajoutAcceuil2', 'true');
-                        
+                        document.activeElement.blur();
                         alert("Tu peux ajouter ce site comme une app sur ton écran d'acceuil !\nSur Safari : appuie sur le bouton Partager puis « Sur l’écran d’accueil ».\nSur Chrome : appuie sur le menu « ⋮ » puis sur « Ajouter à l’écran d’accueil ».\nSur Firefox : appuie sur le menu « ≡ », puis « Partager » et « Sur l’écran d’accueil ».\n")
                     }               
 
