@@ -978,7 +978,7 @@
     </div>
 
     <script>
-        let ajoutAcceuil1 = localStorage.getItem('ajoutAcceuil1');
+        let ajoutAcceuil2 = localStorage.getItem('ajoutAcceuil2');
         let maj2connue = localStorage.getItem('maj2connue');
         if (maj2connue !== 'true') {
             alert(`Nouvelle mise à jour !\nNouveau mode inversé ! \nNouveau mode sombre automatique !`);
@@ -1696,35 +1696,17 @@ try {
             }
             if (stats.totalGames >= 2) {
                 if (isMobile) {
-                    if (ajoutAcceuil1 !== 'true') {
-                        ajoutAcceuil1 = 'true';
-                        localStorage.setItem('ajoutAcceuil1', 'true');
-                        function afficherInstruction() {
-                        const ua = navigator.userAgent;
-                        const isiOS = /iPhone|iPad|iPod/.test(ua);
-                        const isAndroid = /Android/.test(ua);
-
-                        if (isiOS) {
-                            if (/CriOS/.test(ua)) {
-                                alert("Sur Chrome : appuie sur le menu « ⋮ » puis sur « Ajouter à l’écran d’accueil ».");
-                            } else if (/FxiOS/.test(ua)) {
-                                alert("Sur Firefox : appuie sur le menu « ≡ », puis « Partager » et « Sur l’écran d’accueil ».");
-                            } else {
-                                alert("Sur Safari : appuie sur le bouton Partager puis « Sur l’écran d’accueil ».");
-                            }
-                        } else if (isAndroid) {
-                            if (/Firefox/.test(ua)) {
-                                alert("Sur Firefox : appuie sur les trois points « ⋮ » puis sur « Installer ».");
-                            } else {
-                                alert("Sur Chrome : appuie sur les trois points « ⋮ » puis sur « Ajouter à l’écran d’accueil ».");
-                            }
-                        }
+                    if (ajoutAcceuil2 !== 'true') {
+                        ajoutAcceuil2 = 'true';
+                        localStorage.setItem('ajoutAcceuil2', 'true');
+                        
+                        alert("Tu peux ajouter ce site comme une app sur ton écran d'acceuil !\nSur Safari : appuie sur le bouton Partager puis « Sur l’écran d’accueil ».\nSur Chrome : appuie sur le menu « ⋮ » puis sur « Ajouter à l’écran d’accueil ».\nSur Firefox : appuie sur le menu « ≡ », puis « Partager » et « Sur l’écran d’accueil ».\n")
                     }               
 
-                    }
                 }
             }
         }
+        
 
         boutonFinir.addEventListener('click', afficherStats);
         returnHome.addEventListener('click', retournerHome);
